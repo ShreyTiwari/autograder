@@ -1,0 +1,19 @@
+[project]
+name = "autograder"
+version = "0.1.0"
+description = "Extract and grade structured data from scanned student sheets"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+# ingest also needs the `tesseract` binary on PATH (brew install tesseract).
+dependencies = [
+    "pyyaml",       # the per-task config files that live next to the data
+    "pymupdf",      # Stage 1: PDF -> page images
+    "pytesseract",  # Stage 1: header-label OCR for orientation
+    "numpy",        # Stage 1: deskew
+    "pillow",       # image handling
+    # Stage 2 vision providers (only the one you use is imported at runtime):
+    "anthropic",
+    "openai",
+    "google-genai",
+    "boto3>=1.34.122",  # Bedrock Converse API
+]

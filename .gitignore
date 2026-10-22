@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+dist/
+*.egg-info/
+.env
+.env.bedrock
+output/
+# Real scans, rosters, configs and their logs stay local; only the sample is tracked.
+logs/*/*
+!logs/participation/2026-09-03-*/
+data/*/*
+!data/participation/2026-09-03.pdf
+!data/participation/config.yaml
+!data/roster/roster.csv
+!data/quizzes/README.md
+.DS_Store

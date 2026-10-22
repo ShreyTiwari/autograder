@@ -1,0 +1,18 @@
+2026-10-22 00:34:27,947 INFO run: config=/Users/smtiwari/Documents/17313/AutoGrader-public/data/participation/config.yaml pdf=/Users/smtiwari/Documents/17313/AutoGrader-public/data/participation/2026-09-03.pdf date=2026-09-03 roster=4 pages=3 workers=8
+2026-10-22 00:34:27,948 INFO model: bedrock/qwen.qwen3-vl-235b-a22b
+2026-10-22 00:34:27,948 INFO run dir: /Users/smtiwari/Documents/17313/AutoGrader-public/logs/participation/2026-09-03-9d3d79c5-f0866f31
+2026-10-22 00:34:35,038 INFO orient: 3/3 pages done in 7.1s
+2026-10-22 00:34:35,038 INFO orient: 3/3 pages read a header, majority=90; 0 fell back: []
+2026-10-22 00:34:35,211 INFO ingest: 3/3 pages done in 0.2s
+2026-10-22 00:34:39,693 INFO extract: 3/3 pages done in 4.5s
+2026-10-22 00:34:39,694 INFO page 1: alias='jdoe' -> id='jdoe' status=matched
+2026-10-22 00:34:39,694 INFO page 2: alias='asmith' -> id='asmith' status=matched
+2026-10-22 00:34:39,694 INFO page 3: alias='rdas' -> id='rdas' status=matched
+2026-10-22 00:34:39,694 INFO duplicate check: 0 student(s) on more than one sheet
+2026-10-22 00:34:39,712 INFO canvas: 2026-09-03 -> 4 students, 3 graded, 1 at the absent score '0'
+2026-10-22 00:34:39,713 INFO --- summary ---
+2026-10-22 00:34:39,713 INFO time: 11.8s
+2026-10-22 00:34:39,713 INFO usage: 6 model calls, 4,800 input + 207 output tokens
+2026-10-22 00:34:39,713 INFO rows: 3 written, 0 need id review, 0 matched loosely, 0 identified by hand, 0 dropped as not a sheet, 0 pages failed
+2026-10-22 00:34:39,713 DEBUG wrote /Users/smtiwari/Documents/17313/AutoGrader-public/output/participation/2026-09-03.csv
+2026-10-22 00:34:39,713 DEBUG wrote /Users/smtiwari/Documents/17313/AutoGrader-public/output/participation/2026-09-03-canvas.csv

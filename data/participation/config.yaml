@@ -1,0 +1,37 @@
+# Participation sheets. The layout is stable across class dates, so every
+# data/participation/*.pdf shares this config.
+#
+# Two zones, so two calls per page: the AndrewID boxes and the response below
+# them are cropped and read separately. Each zone is one CSV column.
+
+# Where the printed "AndrewID:" / "Date (MM/DD):" labels sit on an upright sheet.
+# Ingest OCRs only this strip, at each of the four rotations, to find which way
+# up a page is.
+orient:
+  region: [0.00, 0.00, 1.00, 0.32]
+
+zones:
+  # "AndrewID:" label + its boxes. The point is for handing a sheet in, so it
+  # hangs on the identity read, not on the transcript: transcribing a
+  # hand-drawn table is unreliable (some come back empty), and a student who
+  # wrote a full answer should not lose the point because the model could not
+  # read the layout.
+  - name: andrew_id
+    kind: boxed_id
+    region: [0.00, 0.12, 0.56, 0.10]
+    points: 1
+    prompt: >
+      This image shows a printed row of boxes labeled "AndrewID:", one
+      handwritten character per box. Read the characters left to right. The
+      value is a CMU AndrewID: lowercase letters and digits only, no spaces,
+      typically 3-8 characters; trailing boxes are often left blank - ignore
+      them. Respond with ONLY a JSON object: {"value": "<characters>"}
+
+  # The open space below the header; transcribed for the record, never scored.
+  - name: response
+    kind: freetext
+    region: [0.00, 0.22, 1.00, 0.76]
+    prompt: >
+      Transcribe the handwritten response in this image exactly as written. If
+      nothing is written, use an empty string. Respond with ONLY a JSON object:
+      {"value": "<transcription>"}

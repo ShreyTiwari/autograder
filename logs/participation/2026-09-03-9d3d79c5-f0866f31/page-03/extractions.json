@@ -1,0 +1,8 @@
+{
+  "andrew_id": {
+    "value": "rdas"
+  },
+  "response": {
+    "value": "1. Lack of systematic testing\n2. Missing edge cases that can go wrong.\n3. Design itself is poor\n4. Lack of real-time feedbacks/metrics during the incident.\n5. Communications system.\n6. Backup system is bad.\n7. No updates after initial sign of errors."
+  }
+}
